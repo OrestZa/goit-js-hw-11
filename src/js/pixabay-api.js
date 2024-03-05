@@ -4,10 +4,6 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 const loaderEl = document.querySelector('.loader');
 
-
-
-export function getImages(query) {
-
   const options = {
     base: 'https://pixabay.com/api/',
     key: '42653068-ca30bcafd67c2a07aae2cb182',
@@ -16,6 +12,10 @@ export function getImages(query) {
     oriental: 'horizontal',
     safesearch: 'true',
   };
+
+
+
+export function getImages(query) {
 
   options.q = query;
   const params = new URLSearchParams(options);
@@ -37,7 +37,7 @@ export function getImages(query) {
           timeout: 1500,
           position: 'bottomCenter',
           message:
-            'There are no images matching your search query. Please, enter something else!',
+            'Sorry, there are no images matching your search query. Please, try again!',
         });
       }
       return data;

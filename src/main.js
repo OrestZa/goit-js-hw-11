@@ -8,13 +8,12 @@ import { searchImage } from './js/render-functions';
 const formEl = document.querySelector('.search');
 const galleryEl = document.querySelector('.gallery');
 
-
-let query = '';
-
 formEl.addEventListener('submit', onSubmit);
 
 function onSubmit(evt) {
-    evt.preventDefault();
+  evt.preventDefault();
+  
+  let query = '';
 
     const lightbox = new SimpleLightbox('.gallery a', {
       nav: true,
